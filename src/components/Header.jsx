@@ -24,7 +24,8 @@ export default function Header() {
         </Link>
         <nav className={`links${open ? ' open' : ''}`} onClick={e => { if (e.target.tagName === 'A') setOpen(false); }}>
           {NAV.map(n => <NavLink key={n.to} to={n.to}>{n.label}</NavLink>)}
-          <NavLink to="/contact" className="cta">Contact us</NavLink>
+          <NavLink to="/contact">Contact us</NavLink>
+          <a href="/Company-Profile.pdf" target="_blank" rel="noopener noreferrer" className="cta">Company profile</a>
         </nav>
         <div className="tools">
           <button className="theme" onClick={toggleTheme} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`} title={`${theme === 'dark' ? 'Light' : 'Dark'} mode`}>
